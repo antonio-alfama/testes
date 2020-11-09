@@ -85,5 +85,5 @@
     
     ![Push Pull](Images/pushpull.jpg)
 
-teste
+
 
