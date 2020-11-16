@@ -1,3 +1,5 @@
+package pizza;
+
 public class Pizza {
 
     private PizzaStatus status;
