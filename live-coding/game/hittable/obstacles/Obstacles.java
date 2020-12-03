@@ -1,18 +1,50 @@
 package hittable.obstacles;
 
-public class Obstacles {
-    protected final String type;
-    protected double life = 100.00;
-    protected final int defenseFactor;
-    protected final int attackFactor;
+import hittable.Hittable;
+import player.Player;
+import player.PlayerInterface;
 
-    public Obstacles(String type, int defenseFactor, int attackFactor){
+import java.util.Random;
+
+public abstract class Obstacles implements Hittable {
+    protected final String type;
+    protected int life = 100;
+
+    public Obstacles(String type) {
         this.type = type;
-        this.defenseFactor = defenseFactor;
-        this.attackFactor = attackFactor;
     }
 
-    public void getAttacked(int playerAttack){
+
+    public String getType() {
+        return type;
+    }
+
+    public void setLife(int life) {
+        this.life = life;
+    }
+
+    public double getLife() {
+        return life;
+    }
+
+    public void getAttacked(int playerAttack) {
         this.life = this.life - playerAttack;
     }
+
+    public boolean isAlive() {
+        return life > 0 ? true : false;
+    }
+
+    @Override
+    public void printEnemy() {
+        System.out.println("Type: " + type + "\n Life:" + life);
+
+    }
+    @Override
+    public int attack() {
+        return 0;
+    }
+    
+    public abstract int getAvoidDamage();
+    public abstract void reward(Player player);
 }

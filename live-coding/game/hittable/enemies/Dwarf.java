@@ -2,8 +2,8 @@
 
 public class Dwarf extends Enemy {
 
-    public Dwarf(int defenseFactor, int attackFactor) {
-        super("Dwarf", defenseFactor, attackFactor);
-    }
+     public Dwarf(String type, int defenseFactor, int attackFactor){
+            super(type, defenseFactor, attackFactor);
+        }
 
 }

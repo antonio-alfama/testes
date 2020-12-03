@@ -2,8 +2,8 @@
 
 public class Elf extends Enemy {
 
-    public Elf(int defenseFactor, int attackFactor){
-        super("Elf", defenseFactor, attackFactor);
+    public Elf(String type, int defenseFactor, int attackFactor){
+        super(type, defenseFactor, attackFactor);
     }
 
 }

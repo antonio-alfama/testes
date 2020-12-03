@@ -1,6 +1,6 @@
 package player;
 
-public interface PlayerInterface {   
+public interface PlayerInterface {
 
     void getHitted(double hit);
 
@@ -9,9 +9,10 @@ public interface PlayerInterface {
     int normalAttack();
 
     int specialAttack();
-    
+
     boolean isAlive();
-    
+
     int getHealth();
-    
+
+    void printPlayer();
 }

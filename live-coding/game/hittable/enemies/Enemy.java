@@ -1,8 +1,10 @@
 package hittable.enemies;
 
-public class Enemy {
+import hittable.Hittable;
+
+public class Enemy implements Hittable {
     protected String type;
-    protected double life = 100.00;
+    protected int life = 100;
     protected final int defenseMax;
     protected final int attackMax;
 
@@ -11,7 +13,6 @@ public class Enemy {
         this.defenseMax = defenseMax;
         this.attackMax = attackMax;
     }
-
 
     public void printEnemy(){
         System.out.println("Type: " + type + "\n Life:" + life);
@@ -25,10 +26,9 @@ public class Enemy {
         return (int) (Math.random() * attackMax);
     }
 
-    public double getAttacked (int damage) {
+    public void getAttacked (int damage) {
         int batatas = (int) (Math.random() * defenseMax); /* 0 a defenseFactor */
         this.life = this.life - damage + batatas;
-        return life;
      }
 
 
