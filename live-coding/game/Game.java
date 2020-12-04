@@ -17,9 +17,20 @@ public class Game {
         int countEnemies = 4, countObstacles = 3;
         
         for (int i = 0; i < hittables.length - 1; i++) {
-            if (countObstacles > 0 && countEnemies == 0) hittables[i] = Hittables.getRandom(new String[]{"obstacles"});
-            if (countObstacles == 0 && countEnemies > 0) hittables[i] = Hittables.getRandom(new String[]{"enemy"});
+            if (countObstacles > 0 && countEnemies == 0) {
+                hittables[i] = Hittables.getRandom(new String[]{"obstacles"});
+                countObstacles --;
+                continue;
+            }
+
+            if (countObstacles == 0 && countEnemies > 0) {
+                hittables[i] = Hittables.getRandom(new String[]{"enemy"});
+                countEnemies--;
+                continue;
+            }
+
             hittables[i] = Hittables.getRandom(new String[]{"enemy", "obstacle"});
+            hittables[i].type  === "enemy" ? countEnemies--: countObstacles --;
         }
 
         hittables[hittables.length - 1] = Hittables.DRAGON;
