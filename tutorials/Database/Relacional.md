@@ -139,9 +139,9 @@ Uma associação relaciona uma ou mais entidades e devem ser usadas sempre que s
 * Parcial: as entidades podem ou não participar na associação 
 
 
-    partenceA(Carro, Pessoa) N:1 t/p
-
-    Todos os carros na base de dados têm de ter um dono mas nem todas as pessoas têm de ser donas de carros
+      partenceA(Carro, Pessoa) N:1 t/p
+  
+      Todos os carros na base de dados têm de ter um dono mas nem todas as pessoas têm de ser donas de carros
 
 ### Exercício
     * Uma empresa está dividida em departamentos.
