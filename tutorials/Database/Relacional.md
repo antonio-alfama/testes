@@ -9,7 +9,7 @@ São operados pelos Sistemas Gerenciadores de Bancos de Dados (SGBD)
 
 Um sistema de gestão de base de dados é um pacote de software com programas de computador que controla, mantêm a manutenção e usam a base de dados. Isto permite organizações a desenvolver convenientemente bases de dados para várias aplicações. 
 
-A base de dados é uma colecção de informação recolhida, ficheiros e outros objectos enquanto o SGBD possui várias funcionalidades que ajudam na gestão do banco de dados (são ferramentas que ajudam na gestão da base de dados, possibilitam o acesso, edição, consulta e inserção de dados). 
+A base de dados é uma colecção de informação recolhida, ficheiros e outros objectos enquanto o SGBD possui várias funcionalidades que ajudam na gestão da base de dados (são ferramentas que ajudam na gestão da base de dados, possibilitam o acesso, edição, consulta e inserção de dados). 
 
 Principais SGBDS:
 * [MySql](https://www.mysql.com/): O MySQL é um dos SGBDS mais utilizados no mundo todo, é uma tecnologia Open Source.
@@ -92,7 +92,7 @@ Uma associação relaciona uma ou mais entidades e devem ser usadas sempre que s
 
 * As associações são representados pelo seu nome, a lista de entidades que nela partipam e os seus atributos. 
 * Normalmente usa-se um verbo e tenta-se que este faço sentido ao ser lido pela ordem
-* Entidade1 -> assosiação -> Entidade 2 
+* Entidade1 -> associação -> Entidade 2 
 
 
     pertence_A(Carro, Pessoa)
@@ -111,7 +111,7 @@ Uma associação relaciona uma ou mais entidades e devem ser usadas sempre que s
 * Binárias (as mais comuns)
 
 
-    pertence_A(Carro, pessoa) 
+    pertence_A(Carro, Pessoa) 
 
 * Ternárias (podem sempre ser transformadas em Binárias)
 
