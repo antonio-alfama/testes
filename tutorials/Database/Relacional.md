@@ -248,9 +248,9 @@ Exemplo:
 * Atributo chave da entidade: chave da relação 
 
     
-    Empregado (_bi_, nome(primeiroNome, ultimoNome))
-
-    empregado    | bi || primeiroNome | ultimoNome | 
+      Empregado (_bi_, nome(primeiroNome, ultimoNome))
+    
+      empregado    | bi || primeiroNome | ultimoNome | 
 
 ### Passo 2: Associação (1 para 1 , 1 para N, N para N) 
 
