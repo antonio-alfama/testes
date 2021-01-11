@@ -148,7 +148,7 @@ Uma associação relaciona uma ou mais entidades e devem ser usadas sempre que s
     * Cada departamento tem um nome, um número e um gerente. Deve ser ainda guardada a data em que o gerente começou a gerir o departamento. 
     * Um departamento controla um determinado número de projetos. Cada projeto tem um nome e um número.
     * Para cada empregado, guardar o nome, o número de BI, endereço e salário. 
-    * Um empregado pertence a um departamento, mas pode trablhar em vários projectos, que não são necessarimente controlados pelo mesmo departamento. 
+    * Um empregado pertence a um departamento, mas pode trabalhar em vários projectos, que não são necessarimente controlados pelo mesmo departamento. 
     * Tomar nota do número de horas por semana que um empregado trabalha num dado projecto. 
     * Tomar nota do supervisor directo de cada empregado
 
@@ -162,7 +162,7 @@ sid   | name | login | age | gpa
 5366 | Jones | jones@cs | 18 | 3.4 
 
 
-    Students (sid:string, name: string, login: string, age: string, gpa: real
+    Students (sid:string, name: string, login: string, age: string, gpa: real)
 
 * Cada coluna é um atributo 
 * Cada linha é um tuplo 
@@ -232,7 +232,7 @@ Exemplo:
 * Alguns atributos não podem conter valores nulos
   * NN (Not Null)
 * Chaves alternativas obrigam a valores únicos: 
-  * UK (Unique Keu)
+  * UK (Unique Key)
   
 ## Inserção e Remoção de tuplos 
 
@@ -317,7 +317,7 @@ Para cada atributo multivalor cria -se uma nova relação que inclui o atributo 
 ## Exercício: Clínica Veterinária
 
     * É necessário guardar o nome, a raça e o dono de cada animal. Cada animal deve ter um identificador único. 
-    * Os dados a reter dos donos dos animais s-ao o nome, morada e número de telefone. Deve ainda ser atribuído um identificador único a cada um. 
+    * Os dados a reter dos donos dos animais são o nome, morada e número de telefone. Deve ainda ser atribuído um identificador único a cada um. 
     * Um animal pode não ter dono. Isto acontece porque frequentemente são tratados animais que são encontrados abandonados. 
     * Deve ser possível guardar informação sobre a existência de uma raça na base de dados mesmo sem haver caês dessa raça que frequnetem a clínica.
     * Uma consulta é dada por um méidoco a um animal numa determinada data e hora. As consultas são marcadas de hora a hora. 
