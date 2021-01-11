@@ -127,11 +127,11 @@ Uma associação relaciona uma ou mais entidades e devem ser usadas sempre que s
 * **N:N**: muitos para muitos 
 
 
-    pertence_A(Carro, Pessoa) N:1
-
-    supervisiona(Empregado, Empregado) 1:1
-
-    trabalha_Em(Empregado, Projecto) N:N
+      pertence_A(Carro, Pessoa) N:1
+  
+      supervisiona(Empregado, Empregado) 1:1
+  
+      trabalha_Em(Empregado, Projecto) N:N
 
 #### Participação 
 
