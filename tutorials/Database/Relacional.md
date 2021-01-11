@@ -203,7 +203,7 @@ valor único para qualquer tuplo da relação.
 * O conjunto de atributos referenciados tem de ser uma chave candidata da relação.
 
    
-    | chave || atributo 1 | atributo2 | # chave externa -> tabela |
+      | chave || atributo 1 | atributo2 | # chave externa -> tabela |
 
 ##### Restrição de Integridade Referencial
 
