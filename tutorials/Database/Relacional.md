@@ -95,9 +95,9 @@ Uma associação relaciona uma ou mais entidades e devem ser usadas sempre que s
 * Entidade1 -> associação -> Entidade 2 
 
 
-    pertence_A(Carro, Pessoa)
-    tem (Curso, Alunos) 
-    trabalha_em(Empregado, Departamento, desde)
+      pertence_A(Carro, Pessoa)
+      tem (Curso, Alunos) 
+      trabalha_em(Empregado, Departamento, desde)
 
 ![Exemplo Assosiação](Images/associação.svg)
 
