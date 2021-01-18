@@ -245,7 +245,7 @@ No caso da chave estrangeira ser composta por mais de uma coluna usa-se uma rest
 
 ### UNION, INTERSECT E EXCEPT 
 
-![exemplo unioninsetesectexcept](../../../main/slides/Database/Images/union_intersect_except.png) 
+![exemplo unioninsetesectexcept](./Images/union_intersect_except.png) 
         
 Tendo em conta a seguinte nova relação **autocarro2**
 
