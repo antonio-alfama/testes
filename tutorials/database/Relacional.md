@@ -300,7 +300,7 @@ Para cada atributo multivalor cria -se uma nova relação que inclui o atributo 
 
     Produto (_id_, nome, preço)
     Projecto (_num_, nome) 
-    Fornecer (_nif_, nome)
+    Fornecedor (_nif_, nome)
     encomendou (Projecto, Produto, Fornecedor, quantidade) N:N:N p/p/p
 
     trabalhaEm    | #id -> produto | #num -> projecto  | #nif-> fornecedor || quantidade |

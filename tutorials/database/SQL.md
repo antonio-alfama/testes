@@ -28,7 +28,7 @@ SQL = DDL + DML + DQL + ...
 * int - Números inteiros ( 4 bytes )
 * numeric(precisão, escala) - Números reais sem limite de tamanho
 * date e time - Data e hora 
-* timestamp - Data + hora no mesmo camp 
+* timestamp - Data + hora no mesmo campo 
 * boolean - Valores booleanos
 
 
@@ -78,8 +78,8 @@ Podemos e devemos dar sempre nome às restrições
             bi integer,
             nome varchar (256),
             salario numeric (9,2)
-                default 0
-                constraint sal_positivo check (salario >= 0),
+                default 0,
+            constraint sal_positivo check (salario >= 0),
             datanascimento date
         ); 
 
@@ -88,8 +88,8 @@ No caso da restrição abranger mais do que uma coluna temos de usar uma restri�
         create table empregado (
             bi integer,
             nome varchar (256),
-            salario numeric (9,2)
-            descontos numeric (9,2)
+            salario numeric (9,2),
+            descontos numeric (9,2),
             constraint desconto_menor_salario check (desconto < salario)
         ); 
 
