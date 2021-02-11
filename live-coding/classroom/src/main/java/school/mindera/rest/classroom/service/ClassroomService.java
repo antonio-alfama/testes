@@ -2,6 +2,7 @@ package school.mindera.rest.classroom.service;
 
 import org.springframework.stereotype.Service;
 import school.mindera.rest.classroom.model.Classroom;
+import school.mindera.rest.classroom.wrapper.ResultList;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -9,10 +10,10 @@ import java.util.List;
 @Service
 public class ClassroomService {
 
-    private final List<Classroom> classrooms = new LinkedList<>();
+    private final ResultList<Classroom> classrooms = new ResultList<>();
 
-    public List<Classroom> getClassroomList() {
-        return classrooms;
+    public List<Classroom> getClassroomList(Integer resultsPerPage, Integer page) {
+        return classrooms.paginate(resultsPerPage, page);
     }
 
     public Classroom createClassroom(Classroom classroom) {

@@ -5,22 +5,34 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import school.mindera.rest.classroom.model.Classroom;
+import school.mindera.rest.classroom.properties.PaginationProperties;
 import school.mindera.rest.classroom.service.ClassroomService;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @RestController
 public class ClassroomController {
 
     private final ClassroomService classroomService;
+    private final PaginationProperties defaultPage;
 
-    public ClassroomController(ClassroomService classroomService) {
+    public ClassroomController(ClassroomService classroomService,
+                               PaginationProperties defaultPage) {
         this.classroomService = classroomService;
+        this.defaultPage = defaultPage;
     }
 
     @GetMapping("/classroom")
-    public ResponseEntity<List<Classroom>> list() {
-        List<Classroom> classrooms = classroomService.getClassroomList();
+    public ResponseEntity<List<Classroom>> list(@RequestParam(required = false) Integer results,
+                                                @RequestParam(required = false) Integer page) {
+
+        List<Classroom> classrooms = classroomService.getClassroomList(
+                results != null ? results : defaultPage.getResultsPerPage(),
+                page !=null ? page : defaultPage.getDefaultPage());
+
         return new ResponseEntity<>(classrooms, HttpStatus.OK);
     }
 
