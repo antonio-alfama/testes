@@ -1,0 +1,13 @@
+{
+  "name": "playing-with-js",
+  "version": "1.0.0",
+  "main": "",
+  "scripts": {
+      "test": "jest",
+      "test:watch": "jest --watch"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
