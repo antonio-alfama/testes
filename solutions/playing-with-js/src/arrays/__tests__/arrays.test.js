@@ -5,10 +5,7 @@ describe('arrays', () => {
         const testArray = [1, 2, 3];
         const item = 4;
 
-        expect(arrayImplementations.add(testArray, item)).toEqual([
-            ...testArray,
-            item,
-        ]);
+        expect(arrayImplementations.add(testArray, item)).toEqual([1, 2, 3, 4]);
     });
 
     it('should add the given item at the start of the array', () => {
@@ -16,8 +13,10 @@ describe('arrays', () => {
         const item = 4;
 
         expect(arrayImplementations.prepend(testArray, item)).toEqual([
-            item,
-            ...testArray,
+            4,
+            1,
+            2,
+            3,
         ]);
     });
 
@@ -70,7 +69,7 @@ describe('arrays', () => {
     it('should reverse the array', () => {
         const testArray = [1, 2, 3, 4];
 
-        expect(arrayImplementations.reverse(testArray)).toBe([4, 3, 2, 1]);
+        expect(arrayImplementations.reverse(testArray)).toEqual([4, 3, 2, 1]);
     });
 
     it('should insert an item in the array at the specific position', () => {
@@ -78,7 +77,7 @@ describe('arrays', () => {
         const item = 'potato';
         const index = 2;
 
-        expect(arrayImplementations.insert(testArray, item, index)).toBe([
+        expect(arrayImplementations.insert(testArray, item, index)).toEqual([
             1,
             2,
             'potato',
@@ -86,13 +85,24 @@ describe('arrays', () => {
         ]);
     });
 
+    it('should return an array filled with the item of the given length', () => {
+        const length = 3;
+        const item = 'a';
+
+        expect(arrayImplementations.fill(length, item)).toEqual([
+            'a',
+            'a',
+            'a',
+        ]);
+    });
+
     it('should remove all the falsy values from the array', () => {
         const testArray = [0, 1, 2, '', null, 4, false];
 
-        expect(arrayImplementations.compact(testArray)).toBe([1, 2, 4]);
+        expect(arrayImplementations.compact(testArray)).toEqual([1, 2, 4]);
     });
 
-    it('should count the number of occurrences of the item in te array', () => {
+    it('should count the number of occurrences of the item in the array', () => {
         const testArray = [0, 1, 1, 1, 2, 3, 4, 5];
         const item = 1;
 
@@ -103,7 +113,7 @@ describe('arrays', () => {
         const testArray = [0, 1, 1, 1, 2, 3, 4, 5];
         const number = 2;
 
-        expect(arrayImplementations.multiply(testArray, number)).toBe([
+        expect(arrayImplementations.multiply(testArray, number)).toEqual([
             0,
             2,
             2,
@@ -118,7 +128,7 @@ describe('arrays', () => {
     it('should find all the duplicates in the given array', () => {
         const testArray = [0, 0, 1, 2, 1, 2, 'potato', 'potato', 10, 11, 15];
 
-        expect(arrayImplementations.findDuplicates(testArray)).toBe([
+        expect(arrayImplementations.findDuplicates(testArray)).toEqual([
             0,
             1,
             2,
@@ -131,14 +141,12 @@ describe('arrays', () => {
         const itemA = 3;
         const itemB = 7;
 
-        expect(arrayImplementations.findAllOccurrences(testArray, itemA)).toBe([
-            1,
-            4,
-        ]);
-        expect(arrayImplementations.findAllOccurrences(testArray, itemB)).toBe([
-            2,
-            5,
-        ]);
+        expect(
+            arrayImplementations.findAllOccurrences(testArray, itemA)
+        ).toEqual([1, 4]);
+        expect(
+            arrayImplementations.findAllOccurrences(testArray, itemB)
+        ).toEqual([2, 5]);
     });
 
     it('should correctly parse params of the given URL', () => {
