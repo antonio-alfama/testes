@@ -5,7 +5,10 @@ describe('arrays', () => {
         const testArray = [1, 2, 3];
         const item = 4;
 
-        expect(arrayImplementations.add(testArray, item)).toEqual([1, 2, 3, 4]);
+        expect(arrayImplementations.add(testArray, item)).toEqual([
+            ...testArray,
+            item,
+        ]);
     });
 
     it('should add the given item at the start of the array', () => {
@@ -13,10 +16,8 @@ describe('arrays', () => {
         const item = 4;
 
         expect(arrayImplementations.prepend(testArray, item)).toEqual([
-            4,
-            1,
-            2,
-            3,
+            item,
+            ...testArray,
         ]);
     });
 
@@ -31,13 +32,13 @@ describe('arrays', () => {
         const testArray = [1, 2, 3];
         const item = 3;
 
-        expect(arrayImplementations.findIndex(testArray, item)).toBe(2);
+        expect(arrayImplementations.findIndex(testArray, item)).toEqual(2);
     });
 
     it('should sum all the items of the given array', () => {
         const testArray = [1, 2, 3, 4, 3];
 
-        expect(arrayImplementations.sum(testArray)).toBe(13);
+        expect(arrayImplementations.sum(testArray)).toEqual(13);
     });
 
     it('should concatenate two arrays', () => {
@@ -60,8 +61,8 @@ describe('arrays', () => {
         const testArrayB = [1, 2, 3, 4];
         const testArrayC = [1, 2, 4];
 
-        expect(arrayImplementations.isEqual(testArrayA, testArrayB)).toBe(true);
-        expect(arrayImplementations.isEqual(testArrayA, testArrayC)).toBe(
+        expect(arrayImplementations.isEqual(testArrayA, testArrayB)).toEqual(true);
+        expect(arrayImplementations.isEqual(testArrayA, testArrayC)).toEqual(
             false
         );
     });
@@ -85,24 +86,13 @@ describe('arrays', () => {
         ]);
     });
 
-    it('should return an array filled with the item of the given length', () => {
-        const length = 3;
-        const item = 'a';
-
-        expect(arrayImplementations.fill(length, item)).toEqual([
-            'a',
-            'a',
-            'a',
-        ]);
-    });
-
     it('should remove all the falsy values from the array', () => {
         const testArray = [0, 1, 2, '', null, 4, false];
 
         expect(arrayImplementations.compact(testArray)).toEqual([1, 2, 4]);
     });
 
-    it('should count the number of occurrences of the item in the array', () => {
+    it('should count the number of occurrences of the item in te array', () => {
         const testArray = [0, 1, 1, 1, 2, 3, 4, 5];
         const item = 1;
 
@@ -141,12 +131,14 @@ describe('arrays', () => {
         const itemA = 3;
         const itemB = 7;
 
-        expect(
-            arrayImplementations.findAllOccurrences(testArray, itemA)
-        ).toEqual([1, 4]);
-        expect(
-            arrayImplementations.findAllOccurrences(testArray, itemB)
-        ).toEqual([2, 5]);
+        expect(arrayImplementations.findAllOccurrences(testArray, itemA)).toEqual([
+            1,
+            4,
+        ]);
+        expect(arrayImplementations.findAllOccurrences(testArray, itemB)).toEqual([
+            2,
+            5,
+        ]);
     });
 
     it('should correctly parse params of the given URL', () => {
